@@ -59,9 +59,33 @@ export PATH=<path_to_neural_logic_machines>/third_party/Jacinle/bin:$PATH
 Create a conda environment for NLM, and install the requirements. This includes the required python packages
 from both Jacinle and NLM. Most of the required packages have been included in the built-in `anaconda` package:
 
-```
-conda create -n nlm anaconda
-conda install pytorch torchvision -c pytorch
+```bash
+conda create -n nlm python=3.6 
+
+conda activate nlm
+
+# find the version for your OS and cuda version
+# https://download.pytorch.org/whl/cpu/torch_stable.html
+wget https://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
+pip install torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
+ 
+pip install numpy==1.19.5
+pip install tqdm==4.64.1
+pip install scikit-learn==0.21.0
+pip install matplotlib==2.2.4
+pip install PyYAML==6.0.1
+pip install certifi==2016.9.26
+pip install cycler==0.11.0
+pip install importlib-resources==5.4.0
+pip install joblib==1.1.1
+pip install kiwisolver==1.3.1
+pip install Pillow==8.4.0
+pip install pyparsing==3.1.1
+pip install python-dateutil==2.9.0.post0
+pip install pytz==2024.1
+pip install six==1.16.0
+pip install threadpoolctl==3.1.0
+pip install zipp==3.6.0
 ```
 
 ## Usage
